@@ -41,38 +41,38 @@
 
 ### Построение на Windows с помощью MSYS2
 
-Install [MSYS2](http://www.msys2.org). Open a terminal using the "MSYS2 MinGW 32-bit" shortcut. (Or use the 64-bit shortcut if you prefer a 64-bit build.)
+Установить [MSYS2](http://www.msys2.org). Откройте терминал с помощью ярлыка "MSYS2 MinGW 32-bit". (Или используйте 64-разрядный ярлык, если вы предпочитаете 64-разрядную сборку.)
 
     $ pacman -Syu
 
-If this is the first time running pacman, you will be told to close the terminal window. After doing so, reopen using the same shortcut as before.
+Если это первый запуск pacman, вам будет сказано закрыть окно терминала. После этого снова откройте, используя тот же ярлык, что и раньше.
 
     $ pacman -Su
     $ pacman -S git
     $ git clone https://github.com/theori-io/nrsc5.git
     $ nrsc5/support/msys2-build
 
-You can test your installation using the included sample file:
+Вы можете протестировать установку с помощью включенного файла примера:
 
     $ cd ~/nrsc5/support
     $ xz -d sample.xz
     $ nrsc5.exe -r sample 0
 
-If the sample file does not work, make sure you followed all of the instructions. If it still doesn't work, file an issue with the error message. Please put "[Windows]" in the title of the issue.
+Если пример файла не работает, убедитесь, что вы выполнили все инструкции.
 
-Once everything is built, you can run nrsc5 independently of MSYS2. Copy the following files from your MSYS2/mingw32 directory (e.g. C:\\msys64\\mingw32\\bin):
+После того, как все построено, вы можете запустить nrsc5 независимо от MSYS2. Скопируйте следующие файлы из MSYS2/mingw32 directory (e.g. C:\\msys64\\mingw32\\bin):
 
 * libnrsc5.dll
 * nrsc5.exe
 
-### Cross-compiling for Windows from Ubuntu / Debian
+### Кросс-компиляция для Windows из Ubuntu / Debian
 
     $ sudo apt install mingw-w64
     $ support/win-cross-compile 32
 
-Replace `32` with `64` if you want a 64-bit build. Once the build is complete, copy `*.dll` and `nrsc5.exe` from the `build-win32/bin` (or `build-win64/bin`) folder to your Windows machine.
+Замените " 32 " на "64", Если вы хотите 64-разрядную сборку. После завершения сборки скопируйте .dll и nrsc5.exe из папки build-win32/bin (или "build-win64/bin) на ваш компьютер с Windows.
 
-### Cross-compiling for Windows from macOS
+### Кросс-компиляция для Windows из macOS
 
     $ brew install mingw-w64
     $ support/win-cross-compile 32
