@@ -2,6 +2,8 @@
 
 Эта программа получает цифровые радиостанции NRSC-5 с помощью RTL-SDR. Он предлагает интерфейс командной строки, а также API, на котором могут быть построены другие приложения. Прежде чем использовать его, вам сначала нужно скомпилировать программу, используя инструкции ниже.
 
+Вы можете скачать предварительно скомпилированный двоичный файл windows здесь: https://github.com/RF-Fox/--NRSC5/releases
+
 ## Построение на Ubuntu, Debian или Raspbian
 
     $ sudo apt install git build-essential cmake autoconf libtool libao-dev libfftw3-dev librtlsdr-dev
