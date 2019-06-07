@@ -1,8 +1,8 @@
-# nrsc5
+# NRSC5
 
-This program receives NRSC-5 digital radio stations using an RTL-SDR dongle. It offers a command-line interface as well as an API upon which other applications can be built. Before using it, you'll first need to compile the program using the build instructions below.
+Эта программа получает цифровые радиостанции NRSC-5 с помощью RTL-SDR. Он предлагает интерфейс командной строки, а также API, на котором могут быть построены другие приложения. Прежде чем использовать его, вам сначала нужно скомпилировать программу, используя инструкции ниже.
 
-## Building on Ubuntu, Debian or Raspbian
+## Построение на Ubuntu, Debian или Raspbian
 
     $ sudo apt install git build-essential cmake autoconf libtool libao-dev libfftw3-dev librtlsdr-dev
     $ git clone https://github.com/theori-io/nrsc5.git
@@ -14,32 +14,32 @@ This program receives NRSC-5 digital radio stations using an RTL-SDR dongle. It 
     $ sudo make install
     $ sudo ldconfig
 
-Available build options:
+Доступные параметры сборки:
 
     -DUSE_COLOR=ON       Colorize log output. [default=OFF]
     -DUSE_NEON=ON        Use NEON instructions. [ARM, default=OFF]
     -DUSE_SSE=ON         Use SSSE3 instructions. [x86, default=OFF]
     -DUSE_FAAD2=ON       AAC decoding with FAAD2. [default=ON]
 
-You can test the program using the included sample capture:
+Вы можете протестировать программу с помощью включенного образца capture:
 
      $ xz -d < ../support/sample.xz | src/nrsc5 -r - 0
 
-## Building on Fedora
+## Здание в Fedora
 
-Follow the Ubuntu instructions above, but replace the first command with the following:
+Следуйте инструкциям Ubuntu выше, но замените первую команду следующей:
 
     $ sudo dnf install make patch cmake autoconf libtool libao-devel fftw-devel rtl-sdr-devel libusb-devel
 
-## Building on macOS using [Homebrew](https://brew.sh)
+## Построение на macOS с использованием [Доморощенный](https://brew.sh)
 
      $ brew install --HEAD https://raw.githubusercontent.com/theori-io/nrsc5/master/nrsc5.rb
 
-## Building for Windows
+## Здание для Windows
 
-To build the program for Windows, you can either use [MSYS2](http://www.msys2.org) on Windows, or else use a cross-compiler on an Ubuntu, Debian or macOS machine. Scripts are provided to help with both cases.
+Чтобы создать программу для Windows, вы можете использовать [MSYS2](http://www.msys2.org) в Windows или используйте кросс-компилятор на машине Ubuntu, Debian или macOS. В обоих случаях предоставляются сценарии.
 
-### Building on Windows with MSYS2
+### Построение на Windows с помощью MSYS2
 
 Install [MSYS2](http://www.msys2.org). Open a terminal using the "MSYS2 MinGW 32-bit" shortcut. (Or use the 64-bit shortcut if you prefer a 64-bit build.)
 
