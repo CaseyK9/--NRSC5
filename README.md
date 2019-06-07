@@ -70,18 +70,18 @@
     $ sudo apt install mingw-w64
     $ support/win-cross-compile 32
 
-Замените " 32 " на "64", Если вы хотите 64-разрядную сборку. После завершения сборки скопируйте .dll и nrsc5.exe из папки build-win32/bin (или "build-win64/bin) на ваш компьютер с Windows.
+Замените " 32 " на "64", Если вы хотите 64-разрядную сборку. После завершения сборки скопируйте *.dll и nrsc5.exe из папки build-win32/bin (или "build-win64/bin) на ваш компьютер с Windows.
 
 ### Кросс-компиляция для Windows из macOS
 
     $ brew install mingw-w64
     $ support/win-cross-compile 32
 
-Replace `32` with `64` if you want a 64-bit build. Once the build is complete, copy `*.dll` and `nrsc5.exe` from the `build-win32/bin` (or `build-win64/bin`) folder to your Windows machine.
+Замените " 32 " на "64", Если вы хотите 64-разрядную сборку. После завершения сборки скопируйте *.dll и nrsc5.exe из папки build-win32/bin (или build-win64/bin) на ваш компьютер с Windows.
 
-## Usage
+## Использование
 
-### Command-line options:
+### Опция командной строки:
 
        frequency                       center frequency in MHz or Hz
                                          (do not provide frequency when reading from file)
@@ -103,24 +103,24 @@ Replace `32` with `64` if you want a 64-bit build. Once the build is complete, c
                                          (WARNING: insecure)
        --dump-hdc file-name            dump HDC packets
 
-### Examples:
+### Образцы:
 
-Tune to 107.1 MHz and play audio program 0:
+Настройка на 107.1 МГц и воспроизведение аудиопрограммы 0:
 
      $ nrsc5 107.1 0
 
-Tune to 107.1 MHz and play audio program 0. Manually set gain to 49.0 dB and save raw IQ samples to a file:
+Настройка на 107.1 МГц и воспроизведение аудиопрограммы 0. Вручную установите коэффициент усиления в 49,0 дБ и сохраните необработанные образцы IQ в файл:
 
      $ nrsc5 -g 49.0 -w samples1071 107.1 0
 
-Read raw IQ samples from a file and play back audio program 0:
+Чтение необработанных образцов IQ из файла и воспроизведение аудиопрограммы 0:
 
      $ nrsc5 -r samples1071 0
 
-Tune to 90.5 MHz and convert audio program 0 to WAV format for playback in an external media player:
+Настройтесь на 90,5 МГц и конвертируйте аудиопрограмму 0 в формат WAV:
 
      $ nrsc5 -o - 90.5 0 | mplayer -
 
-### RTL-SDR drivers on Windows
+### Драйверы RTL-SDR для Windows
 
-If you get errors trying to access your RTL-SDR device, then you may need to use [Zadig](http://zadig.akeo.ie/) to change the USB driver. Once you download and run Zadig, select your RTL-SDR device, ensure the driver is set to WinUSB, and then click "Replace Driver". If your device is not listed, enable "Options" -> "List All Devices".
+Если вы получаете ошибки при попытке доступа к устройству RTL-SDR, вам может потребоваться использовать [Zadig] (http://zadig.akeo.ie/)чтобы изменить драйвер USB. После того как вы загрузите и запустите Задиг, выберите устройство RTL-SDR, убедитесь, что драйвер настроен на WinUSB, а затем нажмите "Replace Driver". Если ваше устройство не указано, включите "Options" - > "List All Devices".
